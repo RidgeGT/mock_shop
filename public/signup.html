@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            /*===== tags =====*/
+            body {
+                text-align: center;
+            }
+            form {
+                display: inline-block;
+                justify-content: left;
+            }
+            input {
+                border: solid #222034 2px;
+                border-radius: 2px;
+                width: 200px;
+            }
+            label{
+                clear: left;
+                display: inline-block;
+                text-align: left;
+                text-justify: auto;
+                width: 80px;
+            }
+            /* ===== classes =====*/
+            .form_response {
+                color:#9b5151;
+                font-size: small;
+                font-family: "Lucida Console", "Courier New", monospace;
+                line-height: 1.6;
+                width: 200px;
+            }
+            .page {
+                margin: auto;
+            }
+        </style>
+
+        <script src = "/signup.js"></script>
+        <title>Sign Up</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <div class = "page">
+                <form method = "POST" onsubmit="return signup();">
+                    <label for = "firstname">first name</label>
+                    <input name = "firstname" placeholder = "first name"/>
+                    <p class = "form_response" ></p>
+                    <label for = "lastname">last name</label>
+                    <input name = "lastname" placeholder = "last name"/>
+                    <p class = "form_response"></p>
+                    <label for = "email">email</label>
+                    <input  type = "email" name = "email" placeholder = "email" required />
+                    <p class = "form_response"></p>
+                    <label for = "password">password</label>
+                    <input type = "password" id = "pw" name = "password" placeholder = "password"/ required>
+                    <p class = "form_response" id = "password_invalid"> </p>
+                    <label for = "password_confirmation">confirm</label>
+                    <input type = "password"  id = "pwconfirm" name = "password_confirmation" placeholder = "confirm password" required />
+                    <p class = "form_response" id = "password_not_confirmed"> </p>
+                    <button>Sign up</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
